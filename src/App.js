@@ -1,15 +1,21 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from './Components/NavBar'
+import NavBar from './Components/NavBar';
 import DemoForm from './Components/DemoForm'
 import CardDemo from './Components/CardDemo';
 import Home from './Components/Home';
+import Doodles from './Components/Doodles';
+import FAQ from './Components/FAQ';
+import NoPage from './Components/NoPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route>
+        <Route path="/" element={<NavBar />}>
           <Route index element={<Home />} />
+          <Route path="doodles" element={<Doodles />} />
+          <Route path="faq" element={<FAQ />} />
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
