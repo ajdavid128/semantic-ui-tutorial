@@ -1,9 +1,9 @@
-
+import ElementDemo from "./ElementDemo";
 
 function Home() {
     return(
         <div>
-            <h1>Semantic UI Demo Site</h1>
+            <ElementDemo />
         </div>
     )
 };

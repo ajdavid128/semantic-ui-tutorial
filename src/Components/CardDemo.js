@@ -1,4 +1,4 @@
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Container } from 'semantic-ui-react';
 import Sboy from '../images/Sboy.png';
 import Sboy2 from '../images/Sboy2.png';
 import Sboy3 from '../images/Sboy3.png';
@@ -11,6 +11,7 @@ import Pspirit2 from '../images/Pspirit2.png';
 
 function CardDemo() {
     return (
+        <Container>
         <Card.Group>
             <Card>
                 <Card.Content>
@@ -48,12 +49,13 @@ function CardDemo() {
                         <img class="visible content" src={Sboy4} alt="drawing of spirit with baseball hat" />
                         <img class="hidden content" src={Sboy3} alt="drawing of spirit with baseball hat" />
                     </div>
-                    <Card.Header>Spirit Boy (invert)</Card.Header>
+                    <Card.Header>Spirit Boy (inverted)</Card.Header>
                     <Card.Description>Doodles by Aaron David</Card.Description>
                 </Card.Content>
             </Card>
              
         </Card.Group>
+        </Container>
     )
 };
 
