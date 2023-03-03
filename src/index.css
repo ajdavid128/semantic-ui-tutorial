@@ -20,3 +20,9 @@ code {
   justify-content: center;
   margin: auto;
 }
+
+#cards {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
