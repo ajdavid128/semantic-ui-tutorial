@@ -1,9 +1,12 @@
 import { Header, Icon, Image, Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { Outlet, Link } from "react-router-dom";
+import HSicon from '../images/HSicon.png';
 
 function SideBar() {
 
 
     return(
+        <>
             <Sidebar
             as={Menu}
             // animation='overlay'
@@ -13,19 +16,25 @@ function SideBar() {
             visible
             width='thin'
             >
-            <Menu.Item as='a'>
-                <Icon name='home' />
-                Home
+            <Menu.Item>
+                <Link to="/">
+                    <Image src={HSicon} size="tiny"/>
+                </Link>
             </Menu.Item>
-            <Menu.Item as='a'>
-                <Icon name='gamepad' />
-                Games
+            <Menu.Item>
+                <Link to="/">
+                    <Icon name="home"/>
+                    Home
+                </Link>
             </Menu.Item>
-            <Menu.Item as='a'>
-                <Icon name='camera' />
-                Channels
+            <Menu.Item>
+                <Link to="/doodles">
+                    Doodles
+                </Link>
             </Menu.Item>
             </Sidebar>
+            <Outlet />
+        </>
 
     )
 }
