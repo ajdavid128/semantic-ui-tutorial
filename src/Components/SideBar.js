@@ -7,7 +7,22 @@ function SideBar() {
 
     return(
         <>
-            <Menu vertical id="side-nav">
+            <div class="sidenav">
+                <Link to="/">
+                    <Image src={HSicon} size="tiny"/>
+                </Link>
+                <Link to="/">
+                    <Icon name="home"/>
+                    Home
+                </Link>
+                <br/>
+                <Link to="/doodles">
+                    Doodles
+                </Link>
+
+            </div>
+            <Outlet />
+            {/* <Menu vertical id="side-nav">
                 <Menu.Item>
                     <Link to="/">
                         <Image src={HSicon} size="tiny"/>
@@ -25,7 +40,7 @@ function SideBar() {
                     </Link>
                 </Menu.Item>
             </Menu>
-            <Outlet />
+            <Outlet /> */}
         </>
 
     )
