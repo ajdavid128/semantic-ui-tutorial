@@ -1,9 +1,15 @@
+import ItemDetail from "./ItemDetail";
 
+function ItemList({checklistItem}) {
 
-function ItemList() {
+    const mappedChecklist = checklistItem.map((eachItem) => {
+        return <ItemDetail key={eachItem.id} />
+    })
+
     return (
         <div>
-
+            <h1>here I am</h1>
+            {mappedChecklist}
         </div>
     )
 };

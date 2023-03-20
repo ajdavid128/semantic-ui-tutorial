@@ -1,6 +1,8 @@
 import { Button } from "semantic-ui-react";
 import { useState } from "react";
 
+import ItemList from "./ItemList";
+
 function Checklist() {
 
     const [checklistItem, setChecklistItem] = useState([])
@@ -10,6 +12,7 @@ function Checklist() {
             
             <h1>Checklist</h1>
             <Button>Create New Item</Button>
+            <ItemList checklistItem={checklistItem}/>
 
         </div>
     )
