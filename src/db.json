@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "item": "first item",
+            "details": "sub-text"
+        },
+        {
+            "id": 2,
+            "item": "second item",
+            "details": "sub-text 2"
+        }
+    ]
+}
