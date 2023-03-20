@@ -4,7 +4,7 @@ import DemoForm from "./DemoForm";
 
 function FAQ() {
     return(
-        <div>
+        <div className="avoid-nav">
             <DemoForm />
         </div>
     )

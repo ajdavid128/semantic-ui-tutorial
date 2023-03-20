@@ -2,7 +2,7 @@ import ElementDemo from "./ElementDemo";
 
 function Home() {
     return(
-        <div>
+        <div className="avoid-nav">
             <ElementDemo />
         </div>
     )

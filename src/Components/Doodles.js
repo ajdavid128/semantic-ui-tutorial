@@ -2,7 +2,7 @@ import CardDemo from "./CardDemo";
 
 function Doodles() {
     return(
-        <div>
+        <div className="avoid-nav">
             <CardDemo />
         </div>
     )
