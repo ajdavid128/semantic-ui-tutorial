@@ -15,6 +15,10 @@ code {
 
 /* ------ ADDED CSS ------ */
 
+.avoid-nav {
+  margin-left: 200px;
+}
+
 #form {
   display: flex;
   justify-content: center;

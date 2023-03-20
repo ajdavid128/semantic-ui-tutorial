@@ -5,7 +5,7 @@ import nic3 from '../images/nic3.jpg';
 
 function ElementDemo() {
     return (
-        <div>
+        <div className="avoid-nav">
             <Container>
                 <h2>HTML JSX Button Element w/o Class Name</h2>
                 <button>Click Me!</button>
