@@ -19,6 +19,10 @@ function SideBar() {
                 <Link to="/doodles">
                     Doodles
                 </Link>
+                <br/>
+                <Link to="/checklist">
+                    Checklist
+                </Link>
 
             </div>
             <Outlet />

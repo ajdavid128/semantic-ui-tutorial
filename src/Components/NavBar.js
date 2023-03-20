@@ -34,6 +34,8 @@ function NavBar() {
                         FAQ
                     </Link>
                 </Menu.Item>
+
+                
                 
                 <Menu.Menu position="right">
                     <Menu.Item>

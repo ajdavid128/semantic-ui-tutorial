@@ -2,8 +2,8 @@
 
 function Checklist() {
     return (
-        <div>
-
+        <div className="avoid-nav">
+            <h1>Checklist</h1>
         </div>
     )
 };
