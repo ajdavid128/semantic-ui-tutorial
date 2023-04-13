@@ -23,6 +23,10 @@ function SideBar() {
                 <Link to="/checklist">
                     Checklist
                 </Link>
+                <br/>
+                <Link to="/dnd">
+                    D&D
+                </Link>
 
             </div>
             <Outlet />

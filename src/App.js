@@ -6,6 +6,7 @@ import FAQ from './Components/FAQ';
 import NoPage from './Components/NoPage';
 import SideBar from './Components/SideBar';
 import Checklist from './Components/Checklist';
+import DnDFetch from './Components/DnDFetch';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="faq" element={<FAQ />} />
           <Route path="*" element={<NoPage />} />
           <Route path="checklist" element={<Checklist />} />
+          <Route path="dnd" element={<DnDFetch />} />
         </Route>
       </Routes>
     </BrowserRouter>
