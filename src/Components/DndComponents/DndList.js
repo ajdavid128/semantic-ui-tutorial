@@ -1,17 +1,41 @@
+import { useEffect, useState } from "react";
+
 import DndCards from "./DndCards";
 
 function DndList({data, dynamicClick, classNameVar}) {
 
-    console.log(data);
+    const [className, setClassName] = useState('')
+    const [classData, setClassData] = useState([])
 
-    const dndArry = data.map((item) => {
-        return <DndCards 
-            key={item.index} 
-            classes={item} 
-            dynamicClick={dynamicClick}
-            classNameVar={classNameVar} 
-            />
-    })
+    console.log(classData);
+
+    // const dndArry = data.map((item) => {
+    //     return <DndCards 
+    //         key={item.index} 
+    //         classes={item} 
+    //         dynamicClick={dynamicClick}
+    //         classNameVar={classNameVar} 
+    //         />
+    // })
+
+    useEffect(() => {
+        fetch(`https://www.dnd5eapi.co/api/classes/${className}`)
+        .then(res => res.json())
+        .then(data => setClassData(data))
+    }, [className])
+
+    // let className
+    // console.log(className)
+
+    const handleDynamicClassName = (e) => {
+        // console.log('hi')
+        const {value} = e.target
+        // console.log(value)
+        setClassName(value.toLowerCase())
+
+    }
+
+
 
     const dropdownOptions = data.map((item) => {
         return <option value={item.name} >{item.name}</option>
@@ -21,11 +45,11 @@ function DndList({data, dynamicClick, classNameVar}) {
         <div>
             <h1>Items</h1>
             <label>Dropdown Menu</label>
-            <select name='classes' id='classNames'>
+            <select onChange={handleDynamicClassName} name='classes' id='classNames'>
                 <option value="">--Please choose an option--</option>
                 {dropdownOptions}
             </select>
-            {dndArry}
+            {/* {dndArry} */}
 
         </div>
     )
