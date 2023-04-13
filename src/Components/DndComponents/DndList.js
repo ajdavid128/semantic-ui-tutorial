@@ -1,11 +1,11 @@
 import DndCards from "./DndCards";
 
-function DndList({data}) {
+function DndList({data, dynamicClick}) {
 
     // console.log(data);
 
     const dndArry = data.map((item) => {
-        return <DndCards key={item.index} classes={item} />
+        return <DndCards key={item.index} classes={item} dynamicClick={dynamicClick} />
     })
 
     return (

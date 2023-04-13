@@ -1,12 +1,12 @@
 
 
-function DndCards({classes}) {
+function DndCards({classes, dynamicClick}) {
 
-    console.log(classes);
+    // console.log(classes);
 
     return (
         <div>
-            <h1>Cards</h1>
+            <h1 onClick={dynamicClick}>{classes.name}</h1>
         </div>
     )
 }
