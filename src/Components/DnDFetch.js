@@ -1,3 +1,4 @@
+import { getValue } from "@testing-library/user-event/dist/utils";
 import { useEffect, useState } from "react";
 import DndList from "./DndComponents/DndList";
 
@@ -12,14 +13,19 @@ function DnDFetch() {
         .then(data => setDndData(data.results))
     },[])
 
-    // useEffect(() => {
-    //     fetch(`https://www.dnd5eapi.co/api/classes/${className}`)
-    //     .then(res => res.json())
-    //     .then(data => console.log(data))
-    // },[])
+    useEffect(() => {
+        fetch(`https://www.dnd5eapi.co/api/classes/${className}`)
+        .then(res => res.json())
+        .then(data => console.log(data))
+    },[])
+
+    let className = ''
+    console.log(className)
 
     const handleDynamicClassName = () => {
-        console.log('hi')
+        console.log()
+        // className = 
+
     }
 
     // console.log(dndData)
@@ -30,6 +36,7 @@ function DnDFetch() {
             <DndList 
                 data={dndData}
                 dynamicClick={handleDynamicClassName}
+                classNameVar={className}
                 />
         </div>
     )

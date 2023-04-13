@@ -1,8 +1,9 @@
 
 
-function DndCards({classes, dynamicClick}) {
+function DndCards({classes, dynamicClick, classNameVar}) {
 
     // console.log(classes);
+    classNameVar = classes.name
 
     return (
         <div>
