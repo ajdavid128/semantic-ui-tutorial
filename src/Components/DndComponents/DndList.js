@@ -24,18 +24,11 @@ function DndList({data, dynamicClick, classNameVar}) {
         .then(data => setClassData(data))
     }, [className])
 
-    // let className
-    // console.log(className)
 
     const handleDynamicClassName = (e) => {
-        // console.log('hi')
         const {value} = e.target
-        // console.log(value)
         setClassName(value.toLowerCase())
-
     }
-
-
 
     const dropdownOptions = data.map((item) => {
         return <option value={item.name} >{item.name}</option>
