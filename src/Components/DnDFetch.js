@@ -11,12 +11,12 @@ function DnDFetch() {
         .then(data => setDndData(data.results))
     },[])
 
-    console.log(dndData)
+    // console.log(dndData)
 
     return (
         <div className="avoid-nav">
             <h1> DND FOREVER</h1>
-            <DndList />
+            <DndList data={dndData}/>
         </div>
     )
 }
